@@ -1,0 +1,142 @@
+/* ═══════════════════════════════════════
+   DARK MODE — Surcharges pour le thème sombre
+   ═══════════════════════════════════════ */
+
+body.dark {
+  background-color: #1a1410;
+  color: #d4c4b0;
+}
+
+/* Navbar */
+body.dark header {
+  background: rgba(26, 20, 16, 0.9);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+body.dark nav ul {
+  background: rgba(26, 20, 16, 0.97);
+}
+
+body.dark nav a {
+  color: rgba(212, 196, 176, 0.6);
+}
+
+body.dark nav a:hover,
+body.dark nav a.nav-active {
+  color: #d4c4b0;
+  border-bottom-color: #c8a27a;
+}
+
+body.dark .burger span {
+  background: #d4c4b0;
+}
+
+body.dark .dark-toggle {
+  color: #c8a27a;
+  border-color: rgba(200, 162, 122, 0.3);
+}
+
+/* Titres */
+body.dark h2 { color: #c8a27a; }
+body.dark .page-hero h1 { color: #c8a27a; }
+
+/* Cartes et composants */
+body.dark .cta-card,
+body.dark .skill-card,
+body.dark .fiche-card,
+body.dark .book-card,
+body.dark .contact-item {
+  background: rgba(200, 162, 122, 0.06);
+  border-color: rgba(200, 162, 122, 0.12);
+}
+
+body.dark .cta-card h3,
+body.dark .book-info h3,
+body.dark .fiche-info h3 {
+  color: #d4c4b0;
+}
+
+/* Compétences — cartes flip */
+body.dark .flip-front {
+  background: linear-gradient(135deg, rgba(200, 162, 122, 0.1), rgba(200, 162, 122, 0.04));
+  border-color: rgba(200, 162, 122, 0.2);
+  color: rgba(200, 162, 122, 0.4);
+}
+
+body.dark .column-label {
+  color: #c8a27a;
+  border-bottom-color: rgba(200, 162, 122, 0.2);
+}
+
+/* Popup newsletter */
+body.dark .popup-card {
+  background: #241c16;
+}
+
+body.dark .popup-card h3 { color: #c8a27a; }
+body.dark .popup-card > p { color: rgba(212, 196, 176, 0.6); }
+
+body.dark .popup-form input[type="email"] {
+  background: rgba(200, 162, 122, 0.08);
+  border-color: rgba(200, 162, 122, 0.2);
+  color: #d4c4b0;
+}
+
+/* Formulaire de contact */
+body.dark .form-group input,
+body.dark .form-group select,
+body.dark .form-group textarea {
+  background: rgba(200, 162, 122, 0.06);
+  border-color: rgba(200, 162, 122, 0.15);
+  color: #d4c4b0;
+}
+
+/* Footer */
+body.dark .footer-full { border-top-color: rgba(255, 255, 255, 0.06); }
+body.dark .footer-col h4 { color: #c8a27a; }
+
+body.dark .footer-col a,
+body.dark .footer-col p,
+body.dark .footer-bottom {
+  color: rgba(212, 196, 176, 0.4);
+}
+
+body.dark .footer-col a:hover { color: #d4c4b0; }
+
+/* Bouton retour en haut */
+body.dark .scroll-top {
+  background: #c8a27a;
+  color: #1a1410;
+}
+
+/* À propos */
+body.dark .about-content,
+body.dark .section-about {
+  background: rgba(200, 162, 122, 0.04);
+}
+
+/* Projets — dégradé sombre */
+body.dark .project-image::after {
+  background: linear-gradient(to top, rgba(10, 5, 0, 0.9) 0%, transparent 60%);
+}
+
+/* Livres — flous latéraux */
+body.dark .books-wrapper::before {
+  background: linear-gradient(to right, #1a1410, transparent);
+}
+
+body.dark .books-wrapper::after {
+  background: linear-gradient(to left, #1a1410, transparent);
+}
+
+/* Fiches — filtres */
+body.dark .fiche-filter {
+  border-color: rgba(200, 162, 122, 0.2);
+  color: rgba(212, 196, 176, 0.5);
+}
+
+body.dark .fiche-filter.active {
+  background: #c8a27a;
+  border-color: #c8a27a;
+  color: #1a1410;
+}

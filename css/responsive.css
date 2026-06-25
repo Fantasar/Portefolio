@@ -1,0 +1,79 @@
+/* ═══════════════════════════════════════
+   RESPONSIVE — Adaptations mobile (<768px)
+   ═══════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 6rem 2rem 2rem;
+  }
+
+  #rubiks-container {
+    width: 260px;
+    height: 260px;
+  }
+
+  .cta-column {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .skills-board {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .fiches-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+  }
+
+  .project-card.large {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .project-card.tall {
+    grid-row: span 1;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-aside {
+    width: 100%;
+  }
+
+  .form-submit {
+    align-self: stretch;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .page-hero h1 {
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee'Phil — Fiches de révision & Lectures</title>
+    <meta name="description" content="Fiches de révision PDF gratuites pour HTML, CSS, JavaScript et lectures recommandées pour développeurs." />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="page-ressources">
+    <header>
+      <nav>
+        <button class="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <button class="dark-toggle" aria-label="Mode sombre" title="Mode sombre">&#9790;</button>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="ressources.html" class="nav-active">Ressources</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="about.html">À propos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-content">
+      <section class="page-hero">
+        <h1>Ressources</h1>
+        <p>Fiches de révision et lectures recommandées pour progresser</p>
+      </section>
+
+      <section id="fiches" class="section-fiches fade-in">
+        <h2>Fiches de révision</h2>
+        <p class="section-subtitle">Des fiches prêtes à imprimer pour réviser efficacement</p>
+        <div class="fiches-filters">
+          <button class="fiche-filter active" data-filter="all">Toutes</button>
+          <button class="fiche-filter" data-filter="html">HTML</button>
+          <button class="fiche-filter" data-filter="css">CSS</button>
+          <button class="fiche-filter" data-filter="js">JavaScript</button>
+        </div>
+        <div class="fiches-grid">
+          <div class="fiche-card" data-category="html">
+            <div class="fiche-preview">
+              <img loading="lazy" src="assets/fiche-html-bases.jpg" alt="Fiche HTML - Les bases" />
+              <span class="fiche-badge gratuit">Gratuit</span>
+            </div>
+            <div class="fiche-info">
+              <span class="fiche-category">HTML</span>
+              <h3>Les bases du HTML</h3>
+              <p>Balises essentielles, structure d'une page, sémantique.</p>
+              <a href="assets/fiches/html-bases.pdf" download class="fiche-btn">Télécharger le PDF</a>
+            </div>
+          </div>
+          <div class="fiche-card" data-category="html">
+            <div class="fiche-preview">
+              <img loading="lazy" src="assets/fiche-html-formulaires.jpg" alt="Fiche HTML - Formulaires" />
+              <span class="fiche-badge gratuit">Gratuit</span>
+            </div>
+            <div class="fiche-info">
+              <span class="fiche-category">HTML</span>
+              <h3>Les formulaires</h3>
+              <p>Input, select, validation, accessibilité des formulaires.</p>
+              <a href="assets/fiches/html-formulaires.pdf" download class="fiche-btn">Télécharger le PDF</a>
+            </div>
+          </div>
+          <div class="fiche-card" data-category="css">
+            <div class="fiche-preview">
+              <img loading="lazy" src="assets/fiche-css-flexbox.jpg" alt="Fiche CSS - Flexbox" />
+              <span class="fiche-badge gratuit">Gratuit</span>
+            </div>
+            <div class="fiche-info">
+              <span class="fiche-category">CSS</span>
+              <h3>Flexbox en un coup d'oeil</h3>
+              <p>Toutes les propriétés flex avec exemples visuels.</p>
+              <a href="assets/fiches/css-flexbox.pdf" download class="fiche-btn">Télécharger le PDF</a>
+            </div>
+          </div>
+          <div class="fiche-card" data-category="css">
+            <div class="fiche-preview">
+              <img loading="lazy" src="assets/fiche-css-grid.jpg" alt="Fiche CSS - Grid" />
+              <span class="fiche-badge premium">Premium</span>
+            </div>
+            <div class="fiche-info">
+              <span class="fiche-category">CSS</span>
+              <h3>CSS Grid complet</h3>
+              <p>Grid template, areas, auto-fit, responsive layouts.</p>
+              <a href="#" class="fiche-btn fiche-btn-premium">Bientôt disponible</a>
+            </div>
+          </div>
+          <div class="fiche-card" data-category="js">
+            <div class="fiche-preview">
+              <img loading="lazy" src="assets/fiche-js-bases.jpg" alt="Fiche JS - Les bases" />
+              <span class="fiche-badge gratuit">Gratuit</span>
+            </div>
+            <div class="fiche-info">
+              <span class="fiche-category">JS</span>
+              <h3>JavaScript - Les fondamentaux</h3>
+              <p>Variables, fonctions, boucles, conditions.</p>
+              <a href="assets/fiches/js-bases.pdf" download class="fiche-btn">Télécharger le PDF</a>
+            </div>
+          </div>
+          <div class="fiche-card" data-category="js">
+            <div class="fiche-preview">
+              <img loading="lazy" src="assets/fiche-js-dom.jpg" alt="Fiche JS - DOM" />
+              <span class="fiche-badge premium">Premium</span>
+            </div>
+            <div class="fiche-info">
+              <span class="fiche-category">JS</span>
+              <h3>Manipuler le DOM</h3>
+              <p>Sélecteurs, événements, modification du DOM.</p>
+              <a href="#" class="fiche-btn fiche-btn-premium">Bientôt disponible</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="lecture" class="fade-in">
+        <h2>Lecture</h2>
+        <p>Mes lectures récentes que je recommande</p>
+        <div class="books-wrapper">
+          <div class="books-track">
+            <a href="#" target="_blank" rel="noopener" class="book-card">
+              <div class="book-cover">
+                <img loading="lazy" src="assets/book1.jpg" alt="Titre du livre 1" />
+              </div>
+              <div class="book-info">
+                <h3>Titre du livre 1</h3>
+                <p>Courte description ou avis personnel sur ce livre.</p>
+              </div>
+            </a>
+            <a href="#" target="_blank" rel="noopener" class="book-card">
+              <div class="book-cover">
+                <img loading="lazy" src="assets/book2.jpg" alt="Titre du livre 2" />
+              </div>
+              <div class="book-info">
+                <h3>Titre du livre 2</h3>
+                <p>Courte description ou avis personnel sur ce livre.</p>
+              </div>
+            </a>
+            <a href="#" target="_blank" rel="noopener" class="book-card">
+              <div class="book-cover">
+                <img loading="lazy" src="assets/book3.jpg" alt="Titre du livre 3" />
+              </div>
+              <div class="book-info">
+                <h3>Titre du livre 3</h3>
+                <p>Courte description ou avis personnel sur ce livre.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <p class="affiliate-notice">Les liens vers les livres sont des liens affiliés Amazon. En achetant via ces liens, vous soutenez Coffee'Phil sans surcoût pour vous.</p>
+      </section>
+    </main>
+
+    <footer class="footer-full">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Coffee'Phil</h4>
+          <p>Portfolio et ressources pour développeurs en herbe. Fiches de révision, lectures et projets web.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="ressources.html">Ressources</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="about.html">À propos</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:lapique.philippe@gmail.com">Email</a></li>
+            <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Lapique Philippe. Tous droits réservés. — <a href="mentions.html">Mentions légales</a></p>
+      </div>
+    </footer>
+
+    <button class="scroll-top" aria-label="Retour en haut">&#8593;</button>
+
+    <script src="js/books.js"></script>
+    <script src="js/fiches.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>

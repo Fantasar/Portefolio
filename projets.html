@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee'Phil — Projets & Compétences</title>
+    <meta name="description" content="Découvrez les projets web et compétences de Philippe Lapique : HTML, CSS, JavaScript, Three.js et plus." />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="page-projets">
+    <header>
+      <nav>
+        <button class="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <button class="dark-toggle" aria-label="Mode sombre" title="Mode sombre">&#9790;</button>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="ressources.html">Ressources</a></li>
+          <li><a href="projets.html" class="nav-active">Projets</a></li>
+          <li><a href="about.html">À propos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-content">
+      <section class="page-hero">
+        <h1>Projets & Compétences</h1>
+        <p>Ce que je sais faire et ce que j'ai construit</p>
+      </section>
+
+      <section id="competences" class="section-competences fade-in">
+        <h2>Compétences</h2>
+        <p class="section-subtitle">Cliquez sur les cartes pour les révéler</p>
+        <div class="skills-board">
+          <div class="skills-column">
+            <h3 class="column-label">À venir</h3>
+            <div class="flip-card" data-color="#61dafb">
+              <div class="flip-inner">
+                <div class="flip-front">?</div>
+                <div class="flip-back">
+                  <span class="skill-icon">⚛</span>
+                  <h4>React</h4>
+                  <p>Composants, hooks, SPA</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card" data-color="#3178c6">
+              <div class="flip-inner">
+                <div class="flip-front">?</div>
+                <div class="flip-back">
+                  <span class="skill-icon">TS</span>
+                  <h4>TypeScript</h4>
+                  <p>Typage statique, interfaces</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skills-column">
+            <h3 class="column-label">En cours</h3>
+            <div class="flip-card" data-color="#f7df1e">
+              <div class="flip-inner">
+                <div class="flip-front">?</div>
+                <div class="flip-back">
+                  <span class="skill-icon">JS</span>
+                  <h4>JavaScript</h4>
+                  <p>Interactivité, DOM, logique applicative</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card" data-color="#049ef4">
+              <div class="flip-inner">
+                <div class="flip-front">?</div>
+                <div class="flip-back">
+                  <span class="skill-icon">3D</span>
+                  <h4>Three.js</h4>
+                  <p>Expériences 3D interactives</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card" data-color="#f05032">
+              <div class="flip-inner">
+                <div class="flip-front">?</div>
+                <div class="flip-back">
+                  <span class="skill-icon">GIT</span>
+                  <h4>Git</h4>
+                  <p>Versioning et collaboration</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skills-column">
+            <h3 class="column-label">Au quotidien</h3>
+            <div class="flip-card" data-color="#e44d26">
+              <div class="flip-inner">
+                <div class="flip-front">?</div>
+                <div class="flip-back">
+                  <span class="skill-icon">&lt;/&gt;</span>
+                  <h4>HTML</h4>
+                  <p>Structure sémantique et accessible</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card" data-color="#264de4">
+              <div class="flip-inner">
+                <div class="flip-front">?</div>
+                <div class="flip-back">
+                  <span class="skill-icon">#</span>
+                  <h4>CSS</h4>
+                  <p>Mise en page, animations, responsive</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="skills-reset">Retourner toutes les cartes</button>
+      </section>
+
+      <section id="projets" class="section-projets fade-in">
+        <h2>Réalisations</h2>
+        <p class="section-subtitle">Quelques projets récents</p>
+        <div class="projects-grid">
+          <a href="#" class="project-card large">
+            <div class="project-image">
+              <img loading="lazy" src="assets/project1.jpg" alt="Projet 1" />
+            </div>
+            <div class="project-info">
+              <h3>Coffee'Phil Portfolio</h3>
+              <p>Site portfolio interactif avec Rubik's Cube 3D et thème coffee shop.</p>
+              <span class="project-tag">HTML / CSS / JS</span>
+              <span class="project-tag">Three.js</span>
+            </div>
+          </a>
+          <a href="#" class="project-card">
+            <div class="project-image">
+              <img loading="lazy" src="assets/project2.jpg" alt="Projet 2" />
+            </div>
+            <div class="project-info">
+              <h3>Projet 2</h3>
+              <span class="project-tag">React</span>
+            </div>
+          </a>
+          <a href="#" class="project-card">
+            <div class="project-image">
+              <img loading="lazy" src="assets/project3.jpg" alt="Projet 3" />
+            </div>
+            <div class="project-info">
+              <h3>Projet 3</h3>
+              <span class="project-tag">API</span>
+            </div>
+          </a>
+          <a href="#" class="project-card wide">
+            <div class="project-image">
+              <img loading="lazy" src="assets/project4.jpg" alt="Projet 4" />
+            </div>
+            <div class="project-info">
+              <h3>Projet 4</h3>
+              <p>Description courte du projet.</p>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">Express</span>
+            </div>
+          </a>
+          <a href="#" class="project-card tall">
+            <div class="project-image">
+              <img loading="lazy" src="assets/project5.jpg" alt="Projet 5" />
+            </div>
+            <div class="project-info">
+              <h3>Projet 5</h3>
+              <p>Description courte du projet.</p>
+              <span class="project-tag">Three.js</span>
+            </div>
+          </a>
+          <a href="#" class="project-card">
+            <div class="project-image">
+              <img loading="lazy" src="assets/project6.jpg" alt="Projet 6" />
+            </div>
+            <div class="project-info">
+              <h3>Projet 6</h3>
+              <span class="project-tag">CSS</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-full">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Coffee'Phil</h4>
+          <p>Portfolio et ressources pour développeurs en herbe. Fiches de révision, lectures et projets web.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="ressources.html">Ressources</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="about.html">À propos</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:lapique.philippe@gmail.com">Email</a></li>
+            <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Lapique Philippe. Tous droits réservés. — <a href="mentions.html">Mentions légales</a></p>
+      </div>
+    </footer>
+
+    <button class="scroll-top" aria-label="Retour en haut">&#8593;</button>
+
+    <script src="js/skills.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>

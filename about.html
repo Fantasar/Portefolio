@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee'Phil — À propos & Contact</title>
+    <meta name="description" content="Développeur web freelance, Philippe Lapique crée des sites interactifs. Contactez-moi pour votre projet." />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="page-about">
+    <header>
+      <nav>
+        <button class="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <button class="dark-toggle" aria-label="Mode sombre" title="Mode sombre">&#9790;</button>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="ressources.html">Ressources</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="about.html" class="nav-active">À propos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-content">
+      <section class="page-hero">
+        <h1>À propos</h1>
+        <p>Qui se cache derrière Coffee'Phil ?</p>
+      </section>
+
+      <section id="about" class="section-about fade-in">
+        <div class="about-content">
+          <div class="about-photo">
+            <img loading="lazy" src="assets/photo.jpg" alt="Philippe Lapique" />
+          </div>
+          <div class="about-text">
+            <h2>Philippe Lapique</h2>
+            <p>
+              Développeur web passionné par la création d'expériences interactives
+              et de sites modernes. Curieux et autodidacte, j'aime explorer de
+              nouvelles technologies et partager mes découvertes.
+            </p>
+            <p>
+              Quand je ne code pas, vous me trouverez un café à la main,
+              plongé dans un bon livre ou en train d'expérimenter avec des outils créatifs.
+            </p>
+            <p>
+              Coffee'Phil c'est à la fois mon portfolio et un espace de partage :
+              des fiches de révision pour les développeurs en herbe,
+              des recommandations de lectures, et un lieu où échanger
+              sur vos projets.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-contact fade-in">
+        <h2>Contact</h2>
+        <p class="section-subtitle">Un projet en tête ? Discutons-en autour d'un café</p>
+        <div class="contact-wrapper">
+          <form class="contact-form" action="https://formsubmit.co/lapique.philippe@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Nouveau message depuis Coffee'Phil" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="" />
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" required placeholder="Votre nom" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="votre@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="subject">Sujet</label>
+              <select id="subject" name="subject">
+                <option value="projet">Projet de développement</option>
+                <option value="collaboration">Collaboration</option>
+                <option value="fiches">Question sur les fiches</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Décrivez votre projet ou votre demande..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">Envoyer le message</button>
+          </form>
+          <div class="contact-aside">
+            <div class="contact-info-block">
+              <h3>Retrouvez-moi</h3>
+              <div class="contact-links">
+                <a href="mailto:lapique.philippe@gmail.com" class="contact-item">
+                  <span class="contact-icon">✉</span>
+                  <span>lapique.philippe@gmail.com</span>
+                </a>
+                <a href="https://github.com/" target="_blank" rel="noopener" class="contact-item">
+                  <span class="contact-icon">⌘</span>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener" class="contact-item">
+                  <span class="contact-icon">in</span>
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </div>
+            <div class="contact-info-block">
+              <h3>Disponibilité</h3>
+              <p>Ouvert aux projets freelance et aux collaborations. Réponse sous 48h.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-full">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Coffee'Phil</h4>
+          <p>Portfolio et ressources pour développeurs en herbe. Fiches de révision, lectures et projets web.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="ressources.html">Ressources</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="about.html">À propos</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:lapique.philippe@gmail.com">Email</a></li>
+            <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Lapique Philippe. Tous droits réservés. — <a href="mentions.html">Mentions légales</a></p>
+      </div>
+    </footer>
+
+    <button class="scroll-top" aria-label="Retour en haut">&#8593;</button>
+
+    <script src="js/animations.js"></script>
+  </body>
+</html>

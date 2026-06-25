@@ -1,0 +1,220 @@
+/* ═══════════════════════════════════════
+   SPLASH — Animation d'accueil typewriter
+   ═══════════════════════════════════════ */
+
+#splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  background-color: #f5ebe0;
+}
+
+#splash .splash-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#splash.revealed {
+  background-color: transparent;
+  pointer-events: none;
+  transition: background-color 1s ease;
+}
+
+#splash.revealed .splash-lines {
+  transform: var(--slide-to);
+}
+
+.splash-line {
+  font-family: "Great Vibes", cursive;
+  color: #6f4e37;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #6f4e37;
+  width: 0;
+}
+
+.splash-line-2 {
+  padding-left: 2rem;
+}
+
+.splash-line-1 {
+  font-size: 4rem;
+  animation: type-line1 1.8s steps(10) 0.3s forwards, blink 0.6s step-end 0.3s 3;
+}
+
+.splash-line-2 {
+  font-size: 2.8rem;
+  opacity: 0;
+  animation: show-line2 0.01s 2.4s forwards, type-line2 2s steps(16) 2.4s forwards, blink 0.6s step-end 2.4s 4;
+}
+
+@keyframes type-line1 {
+  to { width: 7.5em; }
+}
+
+@keyframes show-line2 {
+  to { opacity: 1; }
+}
+
+@keyframes type-line2 {
+  to { width: 11em; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Icône tasse fumante */
+
+.coffee-cup {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.coffee-cup svg {
+  width: 2.2em;
+  height: 2.2em;
+}
+
+.steam {
+  animation: steam-rise 1.5s ease-in-out infinite;
+}
+
+.steam-1 { animation-delay: 0s; }
+.steam-2 { animation-delay: 0.4s; }
+.steam-3 { animation-delay: 0.8s; }
+
+@keyframes steam-rise {
+  0%   { opacity: 0.6; transform: translateY(0); }
+  50%  { opacity: 0.3; transform: translateY(-3px); }
+  100% { opacity: 0;   transform: translateY(-6px); }
+}
+
+/* Popup newsletter */
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 15, 5, 0.4);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+
+.popup-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-card {
+  position: relative;
+  background: #f5ebe0;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(30, 15, 5, 0.2);
+  transform: translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.popup-overlay.visible .popup-card {
+  transform: translateY(0);
+}
+
+.popup-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: rgba(59, 35, 20, 0.35);
+  cursor: pointer;
+  transition: color 0.3s;
+  line-height: 1;
+}
+
+.popup-close:hover {
+  color: #3b2314;
+}
+
+.popup-card h3 {
+  font-family: "Great Vibes", cursive;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #6f4e37;
+  margin-bottom: 0.6rem;
+}
+
+.popup-card > p {
+  font-size: 0.9rem;
+  color: rgba(59, 35, 20, 0.6);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: none;
+}
+
+.popup-form {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.popup-form input[type="email"] {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(111, 78, 55, 0.2);
+  border-radius: 8px;
+  background: rgba(111, 78, 55, 0.04);
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: #3b2314;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.popup-form input[type="email"]:focus {
+  border-color: #6f4e37;
+}
+
+.popup-form input[type="email"]::placeholder {
+  color: rgba(59, 35, 20, 0.3);
+}
+
+.popup-form button {
+  padding: 0.7rem 1.4rem;
+  background: #6f4e37;
+  color: #f5ebe0;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.popup-form button:hover {
+  background: #5a3d25;
+}
+
+.popup-hint {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: rgba(59, 35, 20, 0.3);
+  font-style: italic;
+}

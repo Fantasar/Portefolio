@@ -1,0 +1,11 @@
+/* ═══════════════════════════════════════
+   STYLE.CSS — Fichier principal
+   Importe tous les modules CSS du site
+   ═══════════════════════════════════════ */
+
+@import url("base.css");       /* Reset, typo, animations scroll */
+@import url("layout.css");     /* Navbar, hero, footer, pages */
+@import url("splash.css");     /* Animation d'accueil, popup newsletter */
+@import url("sections.css");   /* Compétences, fiches, projets, contact, livres, CTA */
+@import url("dark.css");       /* Surcharges mode sombre */
+@import url("responsive.css"); /* Adaptations mobile */
