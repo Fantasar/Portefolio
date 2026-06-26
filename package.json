@@ -1,0 +1,20 @@
+{
+  "name": "coffeephil",
+  "version": "1.0.0",
+  "description": "Coffee'Phil — portfolio et ressources pour développeurs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "migrate": "node db/migrate.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-pg-simple": "^10.0.0",
+    "dotenv": "^16.4.0",
+    "express": "^4.21.0",
+    "express-session": "^1.18.0",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.13.0"
+  }
+}

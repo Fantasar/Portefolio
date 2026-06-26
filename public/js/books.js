@@ -1,11 +1,28 @@
-// Gère le carrousel de livres : défilement automatique infini
-// + drag à la souris pour naviguer manuellement
-
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const track = document.querySelector(".books-track");
   if (!track) return;
 
-  // Duplique les cartes pour créer un défilement en boucle
+  try {
+    const res = await fetch("/api/books");
+    const books = await res.json();
+
+    track.innerHTML = books.map((b) => `
+      <a href="${b.amazon_url}" target="_blank" rel="noopener" class="book-card">
+        <div class="book-cover">
+          <img loading="lazy" src="${b.cover_image}" alt="${b.title}" />
+        </div>
+        <div class="book-info">
+          <h3>${b.title}</h3>
+          <p>${b.description}</p>
+        </div>
+      </a>`).join("");
+  } catch {
+    track.innerHTML = "<p>Impossible de charger les livres.</p>";
+    return;
+  }
+
+  if (track.children.length === 0) return;
+
   const cards = Array.from(track.children);
   cards.forEach((card) => {
     track.appendChild(card.cloneNode(true));
@@ -18,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let autoScrollId;
   let pauseTimeout;
 
-  // Fait défiler le carrousel pixel par pixel, revient au début à mi-parcours
   function startAutoScroll() {
     stopAutoScroll();
     autoScrollId = setInterval(() => {
@@ -33,14 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
     clearInterval(autoScrollId);
   }
 
-  // Met en pause l'auto-scroll puis le relance après 3 secondes
   function pauseAndResume() {
     stopAutoScroll();
     clearTimeout(pauseTimeout);
     pauseTimeout = setTimeout(startAutoScroll, 3000);
   }
 
-  // Gestion du drag souris pour naviguer dans le carrousel
   track.addEventListener("mousedown", (e) => {
     e.preventDefault();
     isDown = true;
@@ -67,12 +81,10 @@ document.addEventListener("DOMContentLoaded", () => {
     track.scrollLeft = scrollLeft - dx;
   });
 
-  // Empêche l'ouverture du lien Amazon si on a fait un drag
   track.addEventListener("click", (e) => {
     if (hasDragged) e.preventDefault();
   }, true);
 
-  // Gestion tactile mobile
   track.addEventListener("touchstart", () => {
     stopAutoScroll();
   }, { passive: true });

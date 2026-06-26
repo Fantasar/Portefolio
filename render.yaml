@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: coffeephil
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: coffeephil-db
+          property: connectionString
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: NODE_ENV
+        value: production
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD_HASH
+        sync: false
+
+databases:
+  - name: coffeephil-db
+    plan: free
