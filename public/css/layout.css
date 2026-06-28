@@ -560,6 +560,8 @@ header {
 .page-hero {
   text-align: center;
   padding: 4rem 2rem 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .page-hero h1 {
@@ -581,23 +583,30 @@ header {
 /* Ambiances de fond par page */
 
 .page-ressources {
-  background:
-    radial-gradient(
-      ellipse 55% 45% at 15% 20%,
-      rgba(74, 157, 91, 0.35) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse 50% 40% at 85% 55%,
-      rgba(111, 78, 55, 0.3) 0%,
-      transparent 65%
-    ),
-    radial-gradient(
-      ellipse 60% 50% at 50% 100%,
-      rgba(200, 162, 122, 0.25) 0%,
-      transparent 60%
-    ),
-    #f5ebe0;
+  position: relative;
+  background: #f5ebe0;
+}
+
+.page-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  background: url("../assets/uploads/fond-ecran-1.jpg") center / cover no-repeat;
+  border-radius: 0 0 2rem 2rem;
+  z-index: 0;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+.page-ressources header,
+.page-ressources .page-content,
+.page-ressources .footer-full,
+.page-ressources .scroll-top {
+  position: relative;
+  z-index: 1;
 }
 
 .page-projets {

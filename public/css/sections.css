@@ -56,7 +56,8 @@
   transform: rotateY(180deg);
 }
 
-.flip-front, .flip-back {
+.flip-front,
+.flip-back {
   position: absolute;
   inset: 0;
   backface-visibility: hidden;
@@ -69,7 +70,11 @@
 }
 
 .flip-front {
-  background: linear-gradient(135deg, rgba(111, 78, 55, 0.12), rgba(111, 78, 55, 0.06));
+  background: linear-gradient(
+    135deg,
+    rgba(111, 78, 55, 0.12),
+    rgba(111, 78, 55, 0.06)
+  );
   border: 2px dashed rgba(111, 78, 55, 0.2);
   font-size: 2.5rem;
   font-weight: 300;
@@ -121,7 +126,9 @@
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   cursor: pointer;
-  transition: color 0.3s, border-color 0.3s;
+  transition:
+    color 0.3s,
+    border-color 0.3s;
   font-family: inherit;
 }
 
@@ -181,7 +188,9 @@
   border: 1px solid rgba(111, 78, 55, 0.1);
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .fiche-card:hover {
@@ -315,12 +324,21 @@
   color: #fff;
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
-.project-card.wide  { grid-column: span 2; }
-.project-card.tall  { grid-row: span 2; }
-.project-card.large { grid-column: span 2; grid-row: span 2; }
+.project-card.wide {
+  grid-column: span 2;
+}
+.project-card.tall {
+  grid-row: span 2;
+}
+.project-card.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
 
 .project-card:hover {
   transform: translateY(-4px);
@@ -349,7 +367,11 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(30, 15, 5, 0.85) 0%, transparent 60%);
+  background: linear-gradient(
+    to top,
+    rgba(30, 15, 5, 0.85) 0%,
+    transparent 60%
+  );
 }
 
 .project-info {
@@ -391,8 +413,36 @@
 /* ── À propos ── */
 
 .section-about {
+  position: relative;
   padding: 5rem 2rem;
   background: rgba(111, 78, 55, 0.04);
+  overflow: hidden;
+}
+
+.page-bg-about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/uploads/fond-ecran-3.jpg") center / cover no-repeat;
+  background-size: 100% auto;
+  opacity: 0.19;
+  border-radius: 2rem;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
 }
 
 .about-content {
@@ -401,6 +451,8 @@
   gap: 3rem;
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .about-photo {
@@ -556,7 +608,9 @@
   color: rgba(59, 35, 20, 0.6);
   padding: 0.6rem 0.8rem;
   border-radius: 8px;
-  transition: color 0.3s, background 0.3s;
+  transition:
+    color 0.3s,
+    background 0.3s;
   font-size: 0.85rem;
 }
 
@@ -584,8 +638,12 @@
   padding: 3rem 2rem;
 }
 
-#lecture h2 { margin-bottom: 0.3rem; }
-#lecture > p { margin-bottom: 1.5rem; }
+#lecture h2 {
+  margin-bottom: 0.3rem;
+}
+#lecture > p {
+  margin-bottom: 1.5rem;
+}
 
 .books-wrapper {
   position: relative;
@@ -622,11 +680,21 @@
   cursor: grab;
 }
 
-.books-track:active { cursor: grabbing; }
+.books-track:active {
+  cursor: grabbing;
+}
 
-.books-track::-webkit-scrollbar { height: 6px; }
-.books-track::-webkit-scrollbar-track { background: rgba(59, 35, 20, 0.05); border-radius: 3px; }
-.books-track::-webkit-scrollbar-thumb { background: rgba(111, 78, 55, 0.3); border-radius: 3px; }
+.books-track::-webkit-scrollbar {
+  height: 6px;
+}
+.books-track::-webkit-scrollbar-track {
+  background: rgba(59, 35, 20, 0.05);
+  border-radius: 3px;
+}
+.books-track::-webkit-scrollbar-thumb {
+  background: rgba(111, 78, 55, 0.3);
+  border-radius: 3px;
+}
 
 .book-card {
   flex: 0 0 220px;
@@ -636,7 +704,9 @@
   background: rgba(111, 78, 55, 0.06);
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .book-card:hover {
@@ -657,7 +727,9 @@
   object-fit: cover;
 }
 
-.book-info { padding: 1rem; }
+.book-info {
+  padding: 1rem;
+}
 
 .book-info h3 {
   font-size: 0.95rem;
@@ -697,7 +769,10 @@
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s, border-color 0.35s;
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.35s,
+    border-color 0.35s;
   position: relative;
   overflow: hidden;
   opacity: 0;
@@ -705,9 +780,15 @@
   animation: ctaSlideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.cta-card:nth-child(1) { animation-delay: 0.15s; }
-.cta-card:nth-child(2) { animation-delay: 0.3s; }
-.cta-card:nth-child(3) { animation-delay: 0.45s; }
+.cta-card:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.cta-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.cta-card:nth-child(3) {
+  animation-delay: 0.45s;
+}
 
 @keyframes ctaSlideIn {
   to {
@@ -722,9 +803,18 @@
   inset: 0;
   border-radius: 16px;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(111, 78, 55, 0.3), rgba(200, 162, 122, 0.1), rgba(111, 78, 55, 0.3));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  background: linear-gradient(
+    135deg,
+    rgba(111, 78, 55, 0.3),
+    rgba(200, 162, 122, 0.1),
+    rgba(111, 78, 55, 0.3)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   opacity: 0;
@@ -738,7 +828,9 @@
 
 .cta-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(59, 35, 20, 0.12), 0 0 0 1px rgba(111, 78, 55, 0.08);
+  box-shadow:
+    0 12px 32px rgba(59, 35, 20, 0.12),
+    0 0 0 1px rgba(111, 78, 55, 0.08);
   border-color: rgba(111, 78, 55, 0.2);
 }
 
@@ -751,14 +843,24 @@
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  background: linear-gradient(135deg, rgba(111, 78, 55, 0.12), rgba(200, 162, 122, 0.08));
+  background: linear-gradient(
+    135deg,
+    rgba(111, 78, 55, 0.12),
+    rgba(200, 162, 122, 0.08)
+  );
   border: 1px solid rgba(111, 78, 55, 0.1);
-  transition: transform 0.3s, background 0.3s;
+  transition:
+    transform 0.3s,
+    background 0.3s;
 }
 
 .cta-card:hover .cta-icon {
   transform: scale(1.08);
-  background: linear-gradient(135deg, rgba(111, 78, 55, 0.2), rgba(200, 162, 122, 0.12));
+  background: linear-gradient(
+    135deg,
+    rgba(111, 78, 55, 0.2),
+    rgba(200, 162, 122, 0.12)
+  );
 }
 
 .cta-card h3 {
