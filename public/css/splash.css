@@ -22,13 +22,9 @@
 }
 
 #splash.revealed {
-  background-color: transparent;
+  opacity: 0;
   pointer-events: none;
-  transition: background-color 1s ease;
-}
-
-#splash.revealed .splash-lines {
-  transform: var(--slide-to);
+  transition: opacity 0.8s ease;
 }
 
 .splash-line {

@@ -39,9 +39,10 @@ body.dark .dark-toggle {
 /* Titres */
 body.dark h2 { color: #c8a27a; }
 body.dark .page-hero h1 { color: #c8a27a; }
+body.dark .hero-welcome h1 { color: #c8a27a; }
+body.dark .hero-welcome p { color: rgba(212, 196, 176, 0.6); }
 
 /* Cartes et composants */
-body.dark .cta-card,
 body.dark .skill-card,
 body.dark .fiche-card,
 body.dark .book-card,
@@ -50,7 +51,33 @@ body.dark .contact-item {
   border-color: rgba(200, 162, 122, 0.12);
 }
 
-body.dark .cta-card h3,
+body.dark .cta-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .cta-card:hover {
+  border-color: rgba(200, 162, 122, 0.25);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(200, 162, 122, 0.1);
+}
+
+body.dark .cta-card::before {
+  background: linear-gradient(135deg, rgba(200, 162, 122, 0.4), rgba(200, 162, 122, 0.05), rgba(200, 162, 122, 0.4));
+}
+
+body.dark .cta-icon {
+  background: linear-gradient(135deg, rgba(200, 162, 122, 0.15), rgba(200, 162, 122, 0.06));
+  border-color: rgba(200, 162, 122, 0.15);
+}
+
+body.dark .cta-card:hover .cta-icon {
+  background: linear-gradient(135deg, rgba(200, 162, 122, 0.25), rgba(200, 162, 122, 0.1));
+}
+
+body.dark .cta-card h3 { color: #d4c4b0; }
+body.dark .cta-card p { color: rgba(212, 196, 176, 0.55); }
+body.dark .cta-link { color: #c8a27a; }
+
 body.dark .book-info h3,
 body.dark .fiche-info h3 {
   color: #d4c4b0;
@@ -102,6 +129,16 @@ body.dark .footer-bottom {
 }
 
 body.dark .footer-col a:hover { color: #d4c4b0; }
+
+/* Triangle nav */
+body.dark .tri-label-icon {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.dark .tri-label.active .tri-label-icon {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
 
 /* Bouton retour en haut */
 body.dark .scroll-top {
