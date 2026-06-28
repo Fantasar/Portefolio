@@ -58,6 +58,19 @@ nav a {
   transition: color 0.3s, border-color 0.3s;
 }
 
+.nav-admin {
+  font-size: 1.2rem;
+  opacity: 0.4;
+  transition: opacity 0.3s;
+  margin-left: 0.5rem;
+  border-bottom: none !important;
+}
+
+.nav-admin:hover,
+.nav-admin.nav-active {
+  opacity: 1;
+}
+
 nav a:hover {
   color: #3b2314;
   border-bottom-color: #6f4e37;

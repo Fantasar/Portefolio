@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee'Phil — Tableau de bord</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="page-admin">
+    <header>
+      <nav>
+        <button class="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <button class="dark-toggle" aria-label="Mode sombre" title="Mode sombre">&#9790;</button>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="ressources.html">Ressources</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="about.html">À propos</a></li>
+        </ul>
+        <a href="admin.html" class="nav-admin nav-active" aria-label="Administration" title="Administration">&#9881;</a>
+      </nav>
+    </header>
+
+    <main class="page-content">
+      <section class="page-hero">
+        <h1>Tableau de bord</h1>
+        <p>Gestion du contenu Coffee'Phil</p>
+      </section>
+
+      <section class="admin-section fade-in">
+        <div class="admin-stats">
+          <div class="admin-stat-card">
+            <span class="admin-stat-number" id="stat-books">0</span>
+            <span class="admin-stat-label">Livres</span>
+          </div>
+          <div class="admin-stat-card">
+            <span class="admin-stat-number" id="stat-fiches">0</span>
+            <span class="admin-stat-label">Fiches</span>
+          </div>
+          <div class="admin-stat-card">
+            <span class="admin-stat-number" id="stat-gratuit">0</span>
+            <span class="admin-stat-label">Gratuites</span>
+          </div>
+          <div class="admin-stat-card">
+            <span class="admin-stat-number" id="stat-premium">0</span>
+            <span class="admin-stat-label">Premium</span>
+          </div>
+        </div>
+
+        <div class="admin-search-bar">
+          <input type="text" id="admin-search" placeholder="Rechercher par titre, description..." class="admin-search-input" />
+        </div>
+
+        <div class="admin-topbar">
+          <div class="admin-tabs">
+            <button class="fiche-filter active" data-tab="books">Livres</button>
+            <button class="fiche-filter" data-tab="fiches">Fiches</button>
+          </div>
+          <button id="btn-logout" class="admin-btn admin-btn-danger">Déconnexion</button>
+        </div>
+
+        <!-- Books panel -->
+        <div id="panel-books" class="admin-panel">
+          <div class="admin-panel-header">
+            <h2>Livres</h2>
+            <button id="btn-add-book" class="admin-btn admin-btn-primary">+ Ajouter un livre</button>
+          </div>
+          <div id="books-list" class="admin-list"></div>
+        </div>
+
+        <!-- Fiches panel -->
+        <div id="panel-fiches" class="admin-panel" hidden>
+          <div class="admin-panel-header">
+            <h2>Fiches de révision</h2>
+            <button id="btn-add-fiche" class="admin-btn admin-btn-primary">+ Ajouter une fiche</button>
+          </div>
+          <div id="fiches-list" class="admin-list"></div>
+        </div>
+      </section>
+
+      <!-- Modal -->
+      <div id="admin-modal" class="admin-modal" hidden>
+        <div class="admin-modal-content">
+          <div class="admin-modal-header">
+            <h3 id="modal-title">Ajouter</h3>
+            <button id="modal-close" class="admin-modal-close">&times;</button>
+          </div>
+          <form id="modal-form" class="contact-form">
+            <div id="modal-fields"></div>
+            <button type="submit" class="form-submit" id="modal-submit">Enregistrer</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-full">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Coffee'Phil</h4>
+          <p>Portfolio et ressources pour développeurs en herbe. Fiches de révision, lectures et projets web.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="ressources.html">Ressources</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="about.html">À propos</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:lapique.philippe@gmail.com">Email</a></li>
+            <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Lapique Philippe. Tous droits réservés. — <a href="mentions.html">Mentions légales</a></p>
+      </div>
+    </footer>
+
+    <button class="scroll-top" aria-label="Retour en haut">&#8593;</button>
+
+    <script src="js/admin.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>

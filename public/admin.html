@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffee'Phil — Administration</title>
+    <title>Coffee'Phil — Connexion Admin</title>
     <meta name="robots" content="noindex, nofollow" />
     <link rel="icon" href="assets/favicon.ico" sizes="any" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,17 +24,17 @@
           <li><a href="projets.html">Projets</a></li>
           <li><a href="about.html">À propos</a></li>
         </ul>
+        <a href="admin.html" class="nav-admin nav-active" aria-label="Administration" title="Administration">&#9881;</a>
       </nav>
     </header>
 
     <main class="page-content">
       <section class="page-hero">
         <h1>Administration</h1>
-        <p>Gérer les livres et fiches de révision</p>
+        <p>Connectez-vous pour accéder au tableau de bord</p>
       </section>
 
-      <!-- Login -->
-      <section id="admin-login" class="admin-section fade-in">
+      <section class="admin-section fade-in">
         <form id="login-form" class="contact-form admin-login-form">
           <div class="form-group">
             <label for="email">Email</label>
@@ -48,49 +48,6 @@
           <button type="submit" class="form-submit">Connexion</button>
         </form>
       </section>
-
-      <!-- Dashboard -->
-      <section id="admin-dashboard" class="admin-section" hidden>
-        <div class="admin-topbar">
-          <div class="admin-tabs">
-            <button class="fiche-filter active" data-tab="books">Livres</button>
-            <button class="fiche-filter" data-tab="fiches">Fiches</button>
-          </div>
-          <button id="btn-logout" class="admin-btn admin-btn-danger">Déconnexion</button>
-        </div>
-
-        <!-- Books panel -->
-        <div id="panel-books" class="admin-panel">
-          <div class="admin-panel-header">
-            <h2>Livres</h2>
-            <button id="btn-add-book" class="admin-btn admin-btn-primary">+ Ajouter un livre</button>
-          </div>
-          <div id="books-list" class="admin-list"></div>
-        </div>
-
-        <!-- Fiches panel -->
-        <div id="panel-fiches" class="admin-panel" hidden>
-          <div class="admin-panel-header">
-            <h2>Fiches de révision</h2>
-            <button id="btn-add-fiche" class="admin-btn admin-btn-primary">+ Ajouter une fiche</button>
-          </div>
-          <div id="fiches-list" class="admin-list"></div>
-        </div>
-      </section>
-
-      <!-- Modal -->
-      <div id="admin-modal" class="admin-modal" hidden>
-        <div class="admin-modal-content">
-          <div class="admin-modal-header">
-            <h3 id="modal-title">Ajouter</h3>
-            <button id="modal-close" class="admin-modal-close">&times;</button>
-          </div>
-          <form id="modal-form" class="contact-form">
-            <div id="modal-fields"></div>
-            <button type="submit" class="form-submit" id="modal-submit">Enregistrer</button>
-          </form>
-        </div>
-      </div>
     </main>
 
     <footer class="footer-full">
@@ -124,7 +81,36 @@
 
     <button class="scroll-top" aria-label="Retour en haut">&#8593;</button>
 
-    <script src="js/admin.js"></script>
     <script src="js/animations.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const res = await fetch("/api/me");
+        const data = await res.json();
+        if (data.isAdmin) {
+          window.location.href = "dashboard.html";
+          return;
+        }
+
+        document.getElementById("login-form").addEventListener("submit", async (e) => {
+          e.preventDefault();
+          document.getElementById("login-error").hidden = true;
+
+          const res = await fetch("/api/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              email: document.getElementById("email").value,
+              password: document.getElementById("password").value,
+            }),
+          });
+
+          if (res.ok) {
+            window.location.href = "dashboard.html";
+          } else {
+            document.getElementById("login-error").hidden = false;
+          }
+        });
+      });
+    </script>
   </body>
 </html>
