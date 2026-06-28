@@ -601,6 +601,20 @@ header {
   -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
 }
 
+.hero-bg-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  background: url("../assets/uploads/test.png") center / cover no-repeat;
+  border-radius: 0 0 2rem 2rem;
+  z-index: 0;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
 .page-ressources header,
 .page-ressources .page-content,
 .page-ressources .footer-full,
