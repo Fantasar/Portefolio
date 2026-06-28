@@ -3,36 +3,74 @@
    ═══════════════════════════════════════ */
 
 @media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(245, 235, 224, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(59, 35, 20, 0.08);
+    box-shadow: 0 8px 24px rgba(30, 15, 5, 0.08);
+    gap: 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+  }
+
+  .nav-links li::before {
+    display: none;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+    border-radius: 0;
+  }
+
   .hero {
     padding: 6rem 1rem 2rem;
     gap: 1.5rem;
   }
 
-  .triangle-nav {
-    width: 360px;
-    height: 330px;
+  .hero-image-wrap {
+    width: 95%;
   }
 
-  #rubiks-container {
-    width: 150px;
-    height: 150px;
+  .hero-welcome {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
   }
 
-  .tri-label-icon {
-    width: 36px;
-    height: 36px;
-    font-size: 1.2rem;
+  .hero-logo-wrap {
+    width: 80px;
+    height: 80px;
   }
 
-  .tri-label-text {
-    font-size: 0.65rem;
+  .hero-welcome-text {
+    text-align: center;
   }
 
-  .hero-welcome h1 {
+  .hero-welcome-text h1 {
     font-size: 2.2rem;
   }
 
-  .hero-welcome p {
+  .hero-welcome-text p {
     font-size: 0.9rem;
   }
 

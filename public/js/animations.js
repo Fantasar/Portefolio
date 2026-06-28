@@ -18,19 +18,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Ouvre/ferme le menu burger au clic
   const burger = document.querySelector(".burger");
-  const navUl = document.querySelector("nav ul");
+  const navLinks = document.querySelector(".nav-links");
 
-  if (burger && navUl) {
+  if (burger && navLinks) {
     burger.addEventListener("click", () => {
       burger.classList.toggle("open");
-      navUl.classList.toggle("open");
+      navLinks.classList.toggle("open");
     });
 
-    // Referme le menu quand on clique sur un lien
-    navUl.querySelectorAll("a").forEach((link) => {
+    navLinks.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         burger.classList.remove("open");
-        navUl.classList.remove("open");
+        navLinks.classList.remove("open");
       });
     });
   }
@@ -51,21 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Bascule entre mode clair et sombre, sauvegardé en localStorage
-  const darkToggle = document.querySelector(".dark-toggle");
-  if (darkToggle) {
-    if (localStorage.getItem("dark-mode") === "true") {
-      document.body.classList.add("dark");
-      darkToggle.textContent = "☀";
-    }
-
-    darkToggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-      const isDark = document.body.classList.contains("dark");
-      localStorage.setItem("dark-mode", isDark);
-      darkToggle.textContent = isDark ? "☀" : "☾";
-    });
-  }
 
   // Précharge les pages internes au survol des liens pour accélérer la navigation
   const prefetched = new Set();
